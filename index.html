@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Weather App</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="card">
+        <div class="search">
+            <input type="text" class="search-bar" placeholder="search">
+            <!-- Use 'src' instead of 'img' for the image source -->
+            <button src="https://cdn-icons-png.flaticon.com/128/6050/6050579.png">search</button>
+        </div>
+        <div class="weather loading">
+            <h2 class="city">Weather in Delhi</h2>
+            <div class="temp"><h1>51°C</h1></div>
+            <div class="flex">
+            <img src="" alt="" class="icon">
+            <div class="icon">
+              <img src="" alt="" class="icon-img">
+            </div>  
+            <div class="description">Cloudy</div>
+          </div>
+            <div class="humidity">Humidity: 60%</div>
+            <div class="wind">Breezy</div>      
+        </div>
+    </div>
+    <script>
+        const icon = `<svg width="84px" height="104px" viewBox="0 0 24 24" id="cloud" xmlns="http://www.w3.org/2000/svg" class="icon multi-color">
+            <title style="stroke-width: 2;">cloud</title>
+            <path id="tertiary-fill" d="M20.7,14.5A4,4,0,0,1,17,17H6a3,3,0,0,1-2.6-1.5,3,3,0,0,1,3.68-1.29,5,5,0,0,1,9-2.09A4.08,4.08,0,0,1,17,12,4,4,0,0,1,20.7,14.5Z" style="fill: #b7b7b7; stroke-width: 2;"></path>
+            <path id="primary-stroke" d="M21,13a3.76,3.76,0,0,1-.3,1.5A4,4,0,0,1,17,17H6a3,3,0,1,1,1.08-5.79,5,5,0,0,1,9-2.09A4.08,4.08,0,0,1,17,9,4,4,0,0,1,21,13Z" style="fill: none; stroke: rgb(0, 0, 0); stroke-linecap: round; stroke-linejoin: round; stroke-width: 2;"></path>
+        </svg>`;
+
+        document.querySelector(".icon-img").src = 'data:image/svg+xml,' + encodeURIComponent(icon);
+    </script>
+</body>
+</html>
